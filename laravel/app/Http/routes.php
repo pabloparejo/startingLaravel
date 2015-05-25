@@ -12,16 +12,9 @@
 */
 
 Route::get('/', function(){
-		return "
-		<html>
-		<head>
-			<title></title>
-		</head>
-		<body>
-			<h1>Yooooo What's up!</h1>
-			<h3>YOLO, SWAG</h3>
-		</body>
-		</html>";
+		# you can even create a JSON response!
+		return '{	"hello": "hola",
+					"bye": "adios"}';
 	}
 );
 
