@@ -11,9 +11,24 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function(){
+		return "
+		<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+			<h1>Yooooo What's up!</h1>
+			<h3>YOLO, SWAG</h3>
+		</body>
+		</html>";
+	}
+);
 
-Route::get('home', 'HomeController@index');
+Route::get('param/{param}', function($param)
+{
+    return 'This is the param: '.$param;
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
