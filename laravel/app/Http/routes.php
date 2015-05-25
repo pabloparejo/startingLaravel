@@ -18,9 +18,13 @@ Route::get('/', function(){
 	}
 );
 
-Route::get('param/{param}', function($param)
+Route::get('params/{class}/{id}', function($id, $class)
 {
-    return 'This is the param: '.$param;
+	# you can even create a JSON response!
+	# kids, please, don't do that!!
+
+	return '{	"id": "'.$id.'",
+				"class": "'.$class.'"}';
 });
 
 Route::controllers([
