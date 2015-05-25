@@ -25,7 +25,9 @@ Route::get('params/{class}/{id}', function($id, $class)
 
 	return '{	"id": "'.$id.'",
 				"class": "'.$class.'"}';
-});
+
+	# Well, let's add a few regular expressions
+})->where(['class' => '[a-z]+', 'id' => '[0-9]+']);
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
